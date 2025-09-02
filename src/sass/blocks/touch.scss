@@ -1,0 +1,175 @@
+@use '../base/variables.scss' as *;
+
+.touch {
+    padding-top: 60px;
+    position: relative;
+    .just-validate-error-field {
+        border: none;
+        outline: 1px solid $ui-error;
+    }
+    &__img {
+        display: none;
+    }
+    &__wrapper {
+        margin-top: 60px;
+    }
+    &__fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__label {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: $dark;
+        &:nth-child(2) {
+            margin-top: 8px;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 48px;
+        padding: 10px 15px;
+        border: 1px solid #e2e1e5;
+        background: #fff;
+        border-radius: 2px;
+        
+        cursor: pointer;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+            color: $ui-disabled;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $dark;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 132px;
+        padding: 10px 15px;
+        border: 1px solid #e2e1e5;
+        background: #fff;
+        border-radius: 2px;
+        resize: none;
+        cursor: pointer;
+        
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 200%;
+                color: $ui-disabled;
+            }
+        
+            &:focus {
+                outline: none;
+                border: 1px solid $dark;
+            }
+    }
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        &-colored {
+            color: #a22dc6;
+            text-decoration: none;
+            margin-left: 2px;
+        }
+    }
+    &__checkbox {
+        margin-right: 15px;
+        border: 1px solid $dark;
+        border-radius: 2px;
+        width: 15px;
+        height: 15px;
+    }
+    &__button {
+        margin-top: 20px;
+    }
+    &__vase {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .touch {
+        &__wrapper {
+            margin-top: 45px;
+        }
+        &__input {
+            width: 300px;
+        }
+        &__textarea {
+            width: 300px;
+        }
+        &__vase {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            right: 24px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .touch {
+        &__img {
+            display: block;
+            width: 550px;
+            height: 341px;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        &__form {
+            padding-left: 20px;
+        }
+    
+        &__wrapper {
+            margin-top: 80px;
+        }
+
+        &__input {
+            &:hover {
+                border: none;
+                outline: 1px solid $dark;
+            }
+        }
+        &__vase {
+            right: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .touch {
+        padding-top: 100px;
+        &__img {
+            width: 100%;
+            height: 356px;
+        }
+        &__form {
+            width: auto;
+            padding-left: 143px;
+        }
+        &__fieldset {
+            display: flex;
+            column-gap: 45px;
+        }
+        &__label,
+        &__check-block,
+        &__input,
+        &__textarea {
+            width: 300px;
+        }
+        &__vase {
+            right: 315px;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+@use '../base/variables.scss' as *;
+
+.header {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 15px;
+
+        a {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    
+        .icon-search {
+            background: url('/src/icons/search-outline.svg') center center / cover no-repeat;
+        }
+    
+        .icon-shopping {
+            background-image: url('/src/icons/shopping-bag.svg');
+        }
+    }
+    &__nav {
+        display: none;
+    }
+    &__menu {
+        padding: 50px 10px;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: -100vw;
+        transition: transform 1.5s;
+        background: $light;
+        &-active {
+            transform: translateX(100%);
+        }
+        &-close {
+            width: 20px;
+            height: 20px;
+            span {
+                display: block;
+                width: 19.8px;
+                height: 1px;
+                background: $dark;
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(47deg);
+                }
+                &:nth-child(2) {
+                    transform: translateY(8px) rotate(-47deg);
+                }
+            }
+        }
+        &-nav {
+            margin-top: 50px;
+            padding-left: 14px;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $dark;
+        text-decoration: none;
+    }
+
+}
+
+.burger {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    background: url('/src/icons/burger.svg') no-repeat center / contain;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        &__nav {
+            display: block;
+            margin-top: 20px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                padding-left: 0;
+
+                li {
+                    list-style-type: none; 
+                }
+            }
+        }
+
+        &__link {
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $dark;
+            text-decoration: none;
+        }
+        &__menu {
+            display: none;
+        }
+    }
+    .burger {
+        visibility: hidden;
+        // позволяет скрыть элемент не убирая его из верстки
+    }
+    
+}
+
+@media screen and (min-width:1920px) {
+    .header {
+        &__logo {
+            width: 150px;
+            height: 151px;
+        }
+
+        &__nav {
+            margin-top: 36px;
+            ul {
+                gap: 60px;
+            }
+        }
+    }
+}
+
+

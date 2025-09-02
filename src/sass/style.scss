@@ -1,0 +1,18 @@
+@use "./libs/modern-normalize.min.css";
+@use "./base/basic.scss";
+
+@use "./blocks/header.scss";
+@use './blocks/footer.scss';
+
+@use "./ui/titles.scss";
+@use './ui/button.scss';
+
+@use "./blocks/promo.scss";
+@use './blocks/activities.scss';
+@use './blocks/touch.scss';
+@use './blocks/works.scss';
+
+@use './blocks/catalog.scss';
+@use './blocks/blog.scss';
+@use './blocks/about.scss';
+@use './blocks/find.scss';

@@ -1,0 +1,87 @@
+@use '../base/variables.scss' as *;
+
+.works {
+    padding: 60px 0;
+    &__wrapper {
+        position: relative;
+    }
+    &__slider {
+        margin-top: 40px;
+    }
+    &__img {
+        width: 100%;
+    }
+    .swiper-pagination {
+        bottom: -30px;
+    }
+    .works__slider-nav {
+        display: none;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $dark;
+        border-radius: 0;
+        opacity: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $ceramic;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .works {
+        &__img {
+            display: block;
+            width: 400px;
+            margin: 0 auto;
+        }
+        &__slider {
+            margin-top: 45px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .works {
+        &__slider {
+            margin: 80px 40px 0 40px;
+        }
+        &__wrapper {
+            position: relative;
+        }
+        .works__slider-nav {
+            position: absolute;
+            display: block;
+            height: 21px;
+            width: 8px;
+            top: 50%;
+        }
+        .icon-right {
+            right: 16px;
+        }
+        .icon-left {
+            left: 16px;
+        }
+        .swiper-pagination {
+            bottom: -25px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .works {
+        padding: 100px 0;
+        &__slider {
+            margin: 80px 85px 0 85px;
+        }
+        .icon-right {
+            right: 40px;
+        }
+
+        .icon-left {
+            left: 40px;
+        }
+    }
+}
